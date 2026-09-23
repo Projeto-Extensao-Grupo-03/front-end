@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orçamentos</title>
+
+    <link rel="stylesheet" href="/src/css/home.css">
+</head>
+<body>
+    <aside class="menu">
+        <div class="logo">
+            <img src="" alt="">
+        </div>
+        <nav>
+            <a href="index.html" class="menu-selecionado">Orçamentos</a>
+            <a href="orcamento.html">Novo orçamento</a>
+            <a href="admin.html">Admin</a>
+        </nav>
+    </aside>
+
+    <main class="conteudo">
+        <header class="cabecalho">
+            <div>
+                <h1>Orçamentos</h1>
+                <p>Visualize os orçamentos já emitidos aqui.</p>
+            </div>
+
+            <button id="btn_gerarOrcamento">Gerar orçamento</button>
+
+        </header>
+
+        <section class="pesquisa">
+            <select id="select_tipoPesquisa">
+                <option value="numero">Número do orçamento</option>
+                <option value="funcionario">Funcionário</option>
+                <option value="cliente">Cliente</option>
+            </select>
+
+            <input type="text" id="input_campoPesquisa" placeholder="Pesquisar..."
+            >
+
+            <button id="btn_pesquisar">Buscar</button>
+        </section>
+
+        <section id="listaOrcamentos">
+             <article class="orcamento">
+                <div class="orcamento-resumo">
+                    <h2>Orçamento #1</h2>
+                    <p>05/09/2026</p>
+                    <p>Cliente: João da Silva</p>
+                    <p>Mecânico: HOM64</p>
+                    <p>Status: ABERTO</p>
+                </div>
+
+                <div class="orcamento-detalhes">
+                    <h3>Cliente</h3>
+                    <p>Nome: João da Silva</p>
+                    <p>Telefone: (11) 99999-9999</p>
+                    <p>E-mail: joao@email.com</p>
+
+                    <h3>Veículo</h3>
+                    <p>Placa: ABC-1234</p>
+                    <p>Chassi: 123456789</p>
+                    <p>KM: 50000</p>
+
+                    <h3>Relato do cliente</h3>
+                    <p>Veículo apresentando problema no motor.</p>
+
+                    <h3>Serviços e peças</h3>
+                    <div class="item-orcamento">
+                        <p>Quantidade: 1</p>
+                        <p>Descrição: Troca de óleo</p>
+                        <p>Preço unitário: R$ 100,00</p>
+                        <p>Preço final: R$ 100,00</p>
+                    </div>
+
+                    <h3>Total</h3>
+                    <p>R$ 100,00</p>
+                </div>
+            </article>
+        </section>
+    </main>
+    <script src="/src/js/home.js" ></script>
+</body>
+</html>

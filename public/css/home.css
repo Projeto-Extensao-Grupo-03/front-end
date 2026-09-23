@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333333;
+    display: flex;
+    min-height: 100vh;
+}
+
+.menu {
+    width: 176px;
+    min-height: 100vh;
+    background-color: #191919;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.logo {
+    width: 176px;
+    height: 118px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background-color: #eeeeee;
+}
+
+.menu nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu a {
+    height: 44px;
+    padding: 13px 18px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    background-color: #333333;
+}
+
+.menu .menu-selecionado {
+    background-color: #aaaaaa;
+}
+
+.conteudo {
+    width: calc(100% - 176px);
+    margin-left: 176px;
+    padding: 42px 60px;
+}
+
+.cabecalho {
+    max-width: 1065px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.cabecalho h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.cabecalho p {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#btn_gerarOrcamento {
+    width: 152px;
+    height: 32px;
+    border: none;
+    border-radius: 3px;
+    background-color: #4a4a4a;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#btn_gerarOrcamento:hover {
+    background-color: #333333;
+}
+
+.pesquisa {
+    max-width: 1065px;
+    margin: 58px auto 32px;
+    display: flex;
+    gap: 12px;
+}
+
+#select_tipoPesquisa {
+    width: 210px;
+    height: 42px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    background-color: #ffffff;
+    padding: 0 12px;
+    font-size: 14px;
+    color: #555555;
+}
+
+#input_campoPesquisa {
+    flex: 1;
+    height: 42px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    padding: 0 14px;
+    outline: none;
+    font-size: 14px;
+}
+
+#input_campoPesquisa:focus {
+    border-color: #999999;
+}
+
+#btn_pesquisar {
+    width: 62px;
+    height: 42px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    background-color: #eeeeee;
+    color: #555555;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+#btn_pesquisar:hover {
+    background-color: #dddddd;
+}
+
+#listaOrcamentos {
+    max-width: 1065px;
+    margin: 0 auto;
+}
+
+.orcamento {
+    width: 100%;
+    border: 1px solid #aaaaaa;
+    margin-bottom: 26px;
+    cursor: pointer;
+}
+
+.orcamento-resumo {
+    min-height: 105px;
+    padding: 24px 29px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1.5fr 1fr;
+    align-items: center;
+    gap: 20px;
+}
+.orcamento-resumo h2 {
+    font-size: 20px;
+}
+.orcamento-resumo p {
+    font-size: 13px;
+}
+.orcamento-resumo p:nth-of-type(3) {
+    text-align: right;
+}
+.orcamento:hover {
+    background-color: #fafafa;
+}
+.orcamento-detalhes {
+    display: none;
+    border-top: 1px solid #cccccc;
+    padding: 30px;
+}
+.orcamento.aberto .orcamento-detalhes {
+    display: block;
+}
+.orcamento-detalhes h3 {
+    font-size: 16px;
+    margin: 22px 0 10px;
+}
+.orcamento-detalhes h3:first-child {
+    margin-top: 0;
+}
+.orcamento-detalhes p {
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+.item-orcamento {
+    border: 1px solid #dddddd;
+    padding: 15px;
+    margin-top: 12px;
+}
+.item-orcamento p {
+    margin-bottom: 6px;
+}
+
+@media (max-width: 800px) {
+    .menu {
+        width: 140px;
+    }
+    .logo {
+        width: 140px;
+    }
+    .conteudo {
+        width: calc(100% - 140px);
+        margin-left: 140px;
+        padding: 30px;
+    }
+    .orcamento-resumo {
+        grid-template-columns: 1fr 1fr;
+    }
+    .orcamento-resumo p:nth-of-type(3) {
+        text-align: left;
+    }
+}

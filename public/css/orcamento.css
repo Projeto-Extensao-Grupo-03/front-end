@@ -1,0 +1,464 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333333;
+    display: flex;
+    min-height: 100vh;
+}
+
+.menu {
+    width: 176px;
+    min-height: 100vh;
+    background-color: #191919;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.logo {
+    width: 176px;
+    height: 118px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background-color: #eeeeee;
+}
+
+.menu nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu a {
+    height: 44px;
+    padding: 13px 18px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    background-color: #333333;
+}
+
+.menu .menu-selecionado {
+    background-color: #aaaaaa;
+}
+
+.conteudo {
+    width: 100%;
+    margin-left: 176px;
+    padding: 42px 60px;
+}
+
+.cabecalho {
+    width: 100%;
+    max-width: 1165px;
+    margin: 0 auto 25px;
+}
+
+.cabecalho h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.cabecalho p {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.formulario-orcamento {
+    width: 100%;
+    max-width: 1065px;
+    margin: 0 auto;
+}
+
+.cliente {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.busca-cliente {
+    width: 390px;
+    height: 42px;
+    display: flex;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.busca-cliente input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 0 12px;
+    font-size: 14px;
+}
+
+.busca-cliente button {
+    width: 42px;
+    border: none;
+    background-color: #ffffff;
+    color: #999999;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#btn_cadastrarCliente {
+    width: 145px;
+    height: 42px;
+    border: none;
+    border-radius: 3px;
+    background-color: #4a4a4a;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#btn_cadastrarCliente:hover {
+    background-color: #333333;
+}
+
+.lista-clientes {
+    display: none;
+}
+
+.dados-iniciais {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.dados-iniciais .campo:nth-child(1) {
+    width: 175px;
+}
+
+.dados-iniciais .campo:nth-child(2) {
+    width: 175px;
+}
+
+.dados-iniciais .campo:nth-child(3) {
+    width: 175px;
+}
+
+.campo label {
+    display: block;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+    height: 38px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    padding: 0 10px;
+    outline: none;
+    font-size: 13px;
+    color: #333333;
+    background-color: #ffffff;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    border-color: #999999;
+}
+
+.secao {
+    border-bottom: 1px solid #dddddd;
+}
+
+.cabecalho-secao {
+    width: 100%;
+    height: 38px;
+    border: none;
+    background-color: #d2d2d2;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #333333;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cabecalho-secao:hover {
+    background-color: #c8c8c8;
+}
+
+.seta {
+    font-size: 17px;
+}
+
+.conteudo-secao {
+    display: grid;
+    grid-template-columns: 1fr 160px;
+    column-gap: 20px;
+    row-gap: 8px;
+    padding: 14px 2px 16px;
+}
+
+.campo-nome {
+    grid-column: 1;
+}
+
+.campo-telefone {
+    grid-column: 2;
+}
+
+.campo-email {
+    grid-column: 1;
+}
+
+.campo-nascimento {
+    grid-column: 2;
+}
+
+.campo-placa {
+    grid-column: 1;
+}
+
+.campo-chassi {
+    grid-column: 2;
+}
+
+.campo-km {
+    grid-column: 1;
+    width: 95px;
+}
+
+.relato {
+    margin-top: 15px;
+}
+
+.relato .campo textarea {
+    height: 105px;
+    resize: none;
+    padding: 10px;
+}
+
+.servicos {
+    margin-top: 22px;
+}
+
+.servicos h2 {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.cabecalho-item {
+    display: grid;
+    grid-template-columns: 85px 1fr 90px 90px;
+    gap: 12px;
+    margin-bottom: 6px;
+}
+
+.cabecalho-item span {
+    font-size: 9px;
+    font-weight: bold;
+}
+
+.item-orcamento {
+    display: grid;
+    grid-template-columns: 85px 1fr 90px 90px;
+    gap: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.item-orcamento input {
+    width: 100%;
+    height: 38px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    outline: none;
+    padding: 0 9px;
+    font-size: 12px;
+}
+
+.item-orcamento input:focus {
+    border-color: #999999;
+}
+
+#btn_novoItem {
+    display: block;
+    margin: 9px 0 0 auto;
+    width: 78px;
+    height: 25px;
+    border: none;
+    border-radius: 2px;
+    background-color: #4a4a4a;
+    color: #ffffff;
+    font-size: 8px;
+    cursor: pointer;
+}
+
+#btn_novoItem:hover {
+    background-color: #333333;
+}
+
+.total {
+    height: 38px;
+    margin-top: 16px;
+    padding: 0 12px;
+    background-color: #d2d2d2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.total strong {
+    font-size: 12px;
+}
+
+.total span {
+    font-size: 11px;
+}
+
+.acoes {
+    display: flex;
+    justify-content: center;
+    margin-top: 105px;
+}
+
+#btn_criarOrcamento {
+    width: 95px;
+    height: 34px;
+    border: none;
+    border-radius: 2px;
+    background-color: #4a4a4a;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#btn_criarOrcamento:hover {
+    background-color: #333333;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.aberto {
+    display: flex;
+}
+
+.modal-conteudo {
+    width: 460px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    padding: 30px;
+}
+
+.modal-cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.modal-cabecalho h2 {
+    font-size: 21px;
+}
+
+#btn_fecharModal {
+    border: none;
+    background: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.modal .campo {
+    margin-bottom: 18px;
+}
+
+.modal .campo input {
+    height: 40px;
+}
+
+.modal-acoes {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.modal-acoes button {
+    height: 36px;
+    padding: 0 18px;
+    border: none;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#btn_cancelarCliente {
+    background-color: #eeeeee;
+    color: #555555;
+}
+
+#btn_confirmarCliente {
+    background-color: #4a4a4a;
+    color: #ffffff;
+}
+
+#btn_cancelarCliente:hover {
+    background-color: #dddddd;
+}
+
+#btn_confirmarCliente:hover {
+    background-color: #333333;
+}
+
+@media (max-width: 800px) {
+    .menu {
+        width: 140px;
+    }
+
+    .logo {
+        width: 140px;
+    }
+
+    .conteudo {
+        width: calc(100% - 140px);
+        margin-left: 140px;
+        padding: 30px;
+    }
+
+    .cliente {
+        justify-content: flex-start;
+    }
+}

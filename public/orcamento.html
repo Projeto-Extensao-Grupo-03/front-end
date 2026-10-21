@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo orçamento</title>
+    <link rel="stylesheet" href="/src/css/orcamento.css">
+</head>
+<body>
+
+<aside class="menu">
+    <div class="logo">
+        <img src="" alt="Logo">
+    </div>
+
+    <nav>
+        <a href="index.html">Orçamentos</a>
+        <a href="orcamento.html" class="menu-selecionado">Novo orçamento</a>
+        <a href="admin.html">Admin</a>
+    </nav>
+</aside>
+
+<main class="conteudo">
+
+    <header class="cabecalho">
+        <h1>Novo orçamento</h1>
+        <p>Desenvolva os orçamentos dos serviços aqui.</p>
+    </header>
+
+    <section class="formulario-orcamento">
+
+        <div class="cliente">
+            <div class="busca-cliente">
+                <input id="input_pesquisaCliente" type="text" placeholder="Pesquise aqui...">
+                <button id="btn_pesquisarCliente" type="button">⌕</button>
+            </div>
+
+            <button id="btn_cadastrarCliente" type="button">Cadastrar cliente</button>
+        </div>
+
+        <div id="lista_clientes" class="lista-clientes">
+            <!-- Clientes encontrados aparecerão aqui -->
+        </div>
+
+        <div class="dados-iniciais">
+
+            <div class="campo">
+                <label for="input_codigoFuncionario">Código do funcionário:</label>
+                <input id="input_codigoFuncionario" type="text" placeholder="XXXXXXXX">
+            </div>
+
+            <div class="campo">
+                <label for="input_dataEntrada">Data de entrada:</label>
+                <input id="input_dataEntrada" type="date">
+            </div>
+
+            <div class="campo">
+                <label for="input_dataSaida">Data de saída:</label>
+                <input id="input_dataSaida" type="date">
+            </div>
+
+        </div>
+
+        <section class="secao">
+
+            <button id="btn_informacoesPessoais" class="cabecalho-secao" type="button">
+                <span>Informações pessoais:</span>
+                <span class="seta">⌄</span>
+            </button>
+
+            <div id="div_informacoesPessoais" class="conteudo-secao">
+
+                <div class="campo campo-nome">
+                    <label for="input_nomeCliente">Nome:</label>
+                    <input id="input_nomeCliente" type="text" placeholder="Nome completo">
+                </div>
+
+                <div class="campo campo-telefone">
+                    <label for="input_telefoneCliente">Telefone:</label>
+                    <input id="input_telefoneCliente" type="text" placeholder="(11) 99999-9999">
+                </div>
+
+                <div class="campo campo-email">
+                    <label for="input_emailCliente">Email:</label>
+                    <input id="input_emailCliente" type="email" placeholder="email@email.com">
+                </div>
+
+                <div class="campo campo-nascimento">
+                    <label for="input_dataNascimento">Data de nascimento:</label>
+                    <input id="input_dataNascimento" type="date">
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="secao">
+
+            <button id="btn_informacoesVeiculo" class="cabecalho-secao" type="button">
+                <span>Informações do veículo:</span>
+                <span class="seta">⌄</span>
+            </button>
+
+            <div id="div_informacoesVeiculo" class="conteudo-secao">
+
+                <div class="campo campo-placa">
+                    <label for="input_placa">Placa:</label>
+                    <input id="input_placa" type="text" placeholder="FFFFFFF">
+                </div>
+
+                <div class="campo campo-chassi">
+                    <label for="input_chassi">Chassi:</label>
+                    <input id="input_chassi" type="text" placeholder="Chassi">
+                </div>
+
+                <div class="campo campo-km">
+                    <label for="input_km">KM:</label>
+                    <input id="input_km" type="number" placeholder="000000">
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="relato">
+
+            <div class="campo">
+                <label for="input_relatoCliente">Relato do cliente:</label>
+                <textarea id="input_relatoCliente" placeholder=""></textarea>
+            </div>
+
+        </section>
+
+        <section class="servicos">
+
+            <h2>Serviço executado:</h2>
+
+            <div class="cabecalho-item">
+                <span>QT / HR TÉCNICA:</span>
+                <span>Descrição:</span>
+                <span>Preço unitário:</span>
+                <span>Preço final:</span>
+            </div>
+
+            <div id="lista_itens">
+
+                <div class="item-orcamento">
+
+                    <input id="input_quantidade" type="number" placeholder="0">
+
+                    <input id="input_descricao" type="text" placeholder="">
+
+                    <input id="input_precoUnitario" type="number" step="0.01" placeholder="">
+
+                    <input id="input_precoFinal" type="number" step="0.01" placeholder="">
+
+                </div>
+
+            </div>
+
+            <button id="btn_novoItem" type="button">+ Novo item</button>
+
+        </section>
+
+        <div class="total">
+            <strong>Total:</strong>
+            <span id="span_total">R$0,0</span>
+        </div>
+
+        <div class="acoes">
+            <button id="btn_criarOrcamento" type="button">Criar</button>
+        </div>
+
+    </section>
+
+</main>
+
+<div id="modal_cadastrarCliente" class="modal">
+
+    <div class="modal-conteudo">
+
+        <div class="modal-cabecalho">
+            <h2>Cadastrar cliente</h2>
+            <button id="btn_fecharModal" type="button">×</button>
+        </div>
+
+        <div class="campo">
+            <label for="input_modalNome">Nome:</label>
+            <input id="input_modalNome" type="text">
+        </div>
+
+        <div class="campo">
+            <label for="input_modalTelefone">Telefone:</label>
+            <input id="input_modalTelefone" type="text">
+        </div>
+
+        <div class="campo">
+            <label for="input_modalEmail">Email:</label>
+            <input id="input_modalEmail" type="email">
+        </div>
+
+        <div class="campo">
+            <label for="input_modalDataNascimento">Data de nascimento:</label>
+            <input id="input_modalDataNascimento" type="date">
+        </div>
+
+        <div class="modal-acoes">
+            <button id="btn_cancelarCliente" type="button">Cancelar</button>
+            <button id="btn_confirmarCliente" type="button">Cadastrar</button>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="/src/js/orcamento.js"></script>
+
+</body>
+</html>

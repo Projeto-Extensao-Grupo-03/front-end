@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Cardoso Automotivo</title>
+
+    <link rel="stylesheet" href="/src/css/login.css">
+    <script src="/src/js/login.js" ></script>
+</head>
+<body>
+
+    <main class="login-container">
+        <section class="imagem">
+            <img src="/src/imagens/mecanico.jpg" alt="Cardoso Automotivo">
+        </section>
+
+        <section class="login">
+            <div class="login-box">
+                <h1>Bem-vindo!</h1>
+                <p class="subtitulo">
+                    Faça o login e acesse a aplicação.
+                </p>
+                <form onsubmit="login(); return false">
+                    <div class="campo">
+                        <label for="usuario">Usuário</label>
+                        <input type="text" id="input_usuario">
+                    </div>
+
+                    <div class="campo">
+                        <label for="senha">Senha</label>
+                        <input type="password" id="input_senha">
+                    </div>
+
+                    <button type="submit">Entrar</button>
+
+                    <a href="#" class="esqueceu-senha">Esqueceu a senha? Clique aqui.</a>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
